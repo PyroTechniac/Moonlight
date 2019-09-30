@@ -1,0 +1,12 @@
+{
+    "extends": "eslint-config-bamboo",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "listEmittedFiles": true,
+        "noImplicitAny": true,
+        "declaration": true
+    },
+    "include": [
+        "src"
+    ]
+}
