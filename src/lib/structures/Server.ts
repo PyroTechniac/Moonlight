@@ -48,7 +48,9 @@ export class NightLightServer extends VezaServer {
 		if (!Array.isArray(message.data) || message.data.length === 0 || message.data.length > 2) {
 			message.reply([0, 'INVALID_PAYLOAD']);
 			return;
-		}
+        }
+        
+        console.log(message.data);
 
 		const [route, payload = null] = message.data;
 		const monitor = this.monitors.get(route);
