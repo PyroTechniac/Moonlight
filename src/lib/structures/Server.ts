@@ -3,15 +3,20 @@ import Collection from '@discordjs/collection';
 import { NodeMonitor } from './NodeMonitor';
 import { walk } from '../util/Util';
 import { dirname, join, basename } from 'path';
+import { UserStore } from './UserStore';
 
 export class NightLightServer extends VezaServer {
 
 	public monitors: Collection<string, NodeMonitor>;
 
+	public users: UserStore;
+
 	public userBaseDirectory: string = dirname(require.main!.filename);
 
 	public constructor(name: string, ...args: any[]) {
 		super(name, ...args);
+
+		this.users = new UserStore(this);
 
 		this.monitors = new Collection();
 
@@ -34,13 +39,19 @@ export class NightLightServer extends VezaServer {
 
 			const filename = basename(key);
 
-			const sliced = filename[filename.length - 1].slice(0, -3);
+			const sliced = filename.slice(0, -3);
+			console.log(key);
+			console.log(filename);
+			console.log(sliced);
+			console.log(Piece)
 			this.monitors.set(sliced, new Piece(this, sliced));
 		}
 	}
 
 	public async listen(...options: any[]): Promise<this> {
 		await this.loadAll();
+
+		console.log(this.monitors);
 		return super.listen(...options);
 	}
 
@@ -48,9 +59,9 @@ export class NightLightServer extends VezaServer {
 		if (!Array.isArray(message.data) || message.data.length === 0 || message.data.length > 2) {
 			message.reply([0, 'INVALID_PAYLOAD']);
 			return;
-        }
-        
-        console.log(message.data);
+		}
+
+		console.log(message.data);
 
 		const [route, payload = null] = message.data;
 		const monitor = this.monitors.get(route);

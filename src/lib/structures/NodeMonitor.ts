@@ -1,12 +1,12 @@
-import { Server as VezaServer } from 'veza';
+import { NightLightServer } from './Server';
 
 export abstract class NodeMonitor {
 
-	public server: VezaServer;
+	public server: NightLightServer;
 
 	public name: string;
 
-	public constructor(server: VezaServer, name: string) {
+	public constructor(server: NightLightServer, name: string) {
 		this.server = server;
 
 		this.name = name;
