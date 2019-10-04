@@ -1,5 +1,10 @@
-import { NightLightServer } from './lib/structures/Server';
+import { MoonlightClient } from './lib/MoonlightClient';
 
-new NightLightServer('nightlight-master')
-	.listen(7827)
-	.catch(console.error.bind(null));
+MoonlightClient
+    .defaultClientSchema
+    .add('owners', 'User', { array: true });
+
+// eslint-disable-next-line @typescript-eslint/no-floating-promises
+new MoonlightClient({
+    prefix: 'm!'
+}).login(process.env.TOKEN);

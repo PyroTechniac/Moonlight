@@ -4,7 +4,20 @@
         "outDir": "./dist",
         "listEmittedFiles": true,
         "noImplicitAny": false,
-        "declaration": true
+        "declaration": true,
+        "baseUrl": "./",
+        "paths": {
+            "@structures/*": [
+                "src/lib/structures/*"
+            ],
+            "@typings/*": [
+                "src/lib/types/*"
+            ]
+        },
+        "types": [
+            "discord.js",
+            "klasa"
+        ]
     },
     "include": [
         "src"
