@@ -12,6 +12,12 @@
             ],
             "@typings/*": [
                 "src/lib/types/*"
+            ],
+            "@settings/*": [
+                "src/lib/settings/*"
+            ],
+            "@utils/*": [
+                "src/lib/util/*"
             ]
         },
         "types": [

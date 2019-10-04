@@ -1,0 +1,1 @@
+export const filterArray = <V>(...arr: V[]): V[] => Array.from(new Set([...arr]));

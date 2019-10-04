@@ -3,5 +3,10 @@ export enum Events {
 	Warn = 'warn',
 	Verbose = 'verbose',
 	Error = 'error',
-	Log = 'log'
+	Log = 'log',
+	Warning = 'warning'
+}
+
+export enum Sockets {
+	Starlight = 'starlight-master'
 }
