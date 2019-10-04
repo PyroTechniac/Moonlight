@@ -1,5 +1,5 @@
 import { Server as VezaServer } from 'veza';
-import { IPCMonitorStore } from '@structures/IPCMonitorStore';
+import { IPCMonitorStore } from '../structures/IPCMonitorStore';
 import { Sockets } from './Enums';
 
 declare module 'discord.js' {

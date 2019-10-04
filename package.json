@@ -19,14 +19,12 @@
         "dotenv": "^8.1.0",
         "fs-nextra": "^0.4.5",
         "klasa": "dirigeants/klasa#settings",
-        "module-alias": "^2.2.2",
         "reflect-metadata": "^0.1.13",
         "typescript": "^3.6.3",
         "veza": "^1.1.0"
     },
     "devDependencies": {
         "@types/dotenv": "^6.1.1",
-        "@types/module-alias": "^2.0.0",
         "@types/node": "^12.7.8",
         "@typescript-eslint/eslint-plugin": "^1.13.0",
         "@typescript-eslint/parser": "^1.13.0",

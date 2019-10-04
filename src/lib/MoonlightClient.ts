@@ -1,10 +1,10 @@
+import { User } from 'discord.js';
 import { Client, Colors, KlasaClientOptions } from 'klasa';
 import './MoonlightPreload';
+import { ClientSettings } from './settings/ClientSettings';
 import { IPCMonitorStore } from './structures/IPCMonitorStore';
 import { MoonlightIPCServer as MoonlightServer } from './structures/MoonlightServer';
 import { Events, Sockets } from './types/Enums';
-import { ClientSettings } from './settings/ClientSettings';
-import { User } from 'discord.js';
 
 const g = new Colors({ text: 'green' }).format('[IPC   ]');
 const y = new Colors({ text: 'yellow' }).format('[IPC   ]');

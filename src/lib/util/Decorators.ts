@@ -1,5 +1,5 @@
 import { PieceOptions, Piece, Store } from 'klasa';
-import { Constructor } from '@typings/Types';
+import { Constructor } from '../types/Types';
 
 export function createClassDecorator(fn: Function): Function {
 	return fn;

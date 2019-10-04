@@ -5,21 +5,6 @@
         "listEmittedFiles": true,
         "noImplicitAny": false,
         "declaration": true,
-        "baseUrl": "./",
-        "paths": {
-            "@structures/*": [
-                "src/lib/structures/*"
-            ],
-            "@typings/*": [
-                "src/lib/types/*"
-            ],
-            "@settings/*": [
-                "src/lib/settings/*"
-            ],
-            "@utils/*": [
-                "src/lib/util/*"
-            ]
-        },
         "types": [
             "discord.js",
             "klasa"
